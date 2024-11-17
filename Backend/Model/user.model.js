@@ -6,7 +6,7 @@ const userSchema= new Schema({
     password:{type:String,require:true},
     number:{type:String,require:true},
     role:{type:String,enum:["admin","customer","seller"],default:"customer"},
-    location:{type:{type:String,default:"Point"},coordinates:{type:[Number],require:true}}
+    location:{lat:{ type: Schema.Types.Decimal128, required: true } ,long:{ type: Schema.Types.Decimal128, required: true } }
 })
 
 const userModel=model("user",userSchema);
