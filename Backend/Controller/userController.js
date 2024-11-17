@@ -1,6 +1,5 @@
 const userModel = require("../Model/user.model");
 const argon2 = require("argon2");
-const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
@@ -57,14 +56,12 @@ const login = async (req, res) => {
     }
 };
 
-const update=async(req,res)=>{
+const updateuser=async(req,res)=>{
     try{
-        const {_id}=req.params;
+        const {id}=req.params;
         const update=req.body;
-        if (!mongoose.Types.ObjectId.isValid(_id)) {
-            return res.status(400).json({ message: "Invalid ID format" });
-        }
-        const user=await userModel.findByIdAndUpdate(_id,update)
+       
+        const user=await userModel.findByIdAndUpdate(id,update)
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
@@ -84,4 +81,4 @@ const deleteuser=async(req,res)=>{
     }
 }
 
-module.exports = { register, login ,update,deleteuser};
+module.exports = { register, login ,updateuser,deleteuser};
