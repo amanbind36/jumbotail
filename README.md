@@ -19,29 +19,34 @@
   - Start the server:(npm run dev)
 
 - ## File Structure
-  - jumbotail
-- ├── Backend
-- │   ├── Controller          # Contains controllers for handling business logic
-- │   │   ├── productController.js
-- │   │   ├── userController.js
-- │   │   └── warehouseController.js
-- │   ├── DB                  # Database connection setup
-- │   │   └── Connection.js
-- │   ├── Middleware          # Contains RBAC middleware
-- │   │   └── rbac.middleware.js
-- │   ├── Model               # MongoDB models for collections
-- │   │   ├── product.model.js
-- │   │   ├── user.model.js
-- │   │   └── warehouse.model.js
-- │   ├── Route               # API route definitions
-- │   │   ├── product.Route.js
-- │   │   ├── user.Route.js
-- │   │   └── warehouse.Route.js
-- ├── node_modules
-- ├── .env                    # Environment variables
-- ├── package-lock.json       # Dependency lock file
-- ├── package.json            # Project metadata and dependencies
-- ├── server.js               # Main application entry point
+- ```plaintext
+  jumbotail
+ ├── Backend
+ │   ├── Controller          # Contains controllers for handling business logic
+ │   │   ├── productController.js
+ │   │   ├── userController.js
+ │   │   └── warehouseController.js
+ │   ├── DB                  # Database connection setup
+ │   │   └── Connection.js
+ │   ├── Middleware          # Contains RBAC middleware
+ │   │   └── rbac.middleware.js
+ │   ├── Model               # MongoDB models for collections
+ │   │   ├── product.model.js
+ │   │   ├── user.model.js
+ │   │   └── warehouse.model.js
+ │   ├── Route               # API route definitions
+ │   │   ├── product.Route.js
+ │   │   ├── user.Route.js
+ │   │   └── warehouse.Route.js
+ ├── node_modules
+ ├── .env                    # Environment variables
+ ├── package-lock.json       # Dependency lock file
+ ├── package.json            # Project metadata and dependencies
+ ├── server.js               # Main application entry point
+
+
+
+ 
 
 - ## Endpoints
  - /api/users
