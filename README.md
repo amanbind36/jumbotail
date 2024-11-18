@@ -12,7 +12,7 @@
   - Postman (for testing API endpoints)
 
 - - ## Installation
-  - git clone [https://github.com/your-username/jumbotail-backend.git](https://github.com/amanbind36/jumbotail)
+  - git clone https://github.com/amanbind36/jumbotail
   - cd jumbotail-backend
   - npm install
   - Configure environment variables
