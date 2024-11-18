@@ -1,4 +1,4 @@
-const userModel=require("../Model/user.model")
+
 const userModel=require("../Model/user.model")
 
 const roleAuthorization=(req,res,next)=>{

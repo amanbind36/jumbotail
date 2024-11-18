@@ -2,11 +2,12 @@
 const productModel = require("../Model/product.model");
 const addProduct = async (req, res) => {
     try {
-        const { sellerName, productName, price, attribute } = req.body;
+        const { sellerName, productName, price, location,attribute } = req.body;
 
         const newProduct = new productModel({
             sellerName,
             productName,
+            location,
             price,
             attribute,
         });

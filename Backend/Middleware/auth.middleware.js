@@ -25,7 +25,7 @@ const authenticate = async (req, res, next) => {
     }
 
     
-    req.user = decoded;
+    req.UserModel = decoded;
     return next();
 
   } catch (err) {

@@ -6,7 +6,16 @@ const userSchema= new Schema({
     password:{type:String,require:true},
     number:{type:String,require:true},
     role:{type:String,enum:["admin","customer","seller"],default:"customer"},
-    location:{lat:{ type: Schema.Types.Decimal128, required: true } ,lng:{ type: Schema.Types.Decimal128, required: true } }
+    location: { 
+        lat: { 
+          type: Number, 
+          required: true  
+        },
+        lng: { 
+          type: Number, 
+          required: true 
+        }
+      }
 })
 
 const userModel=model("user",userSchema);

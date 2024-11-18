@@ -200,7 +200,11 @@ const calculate= async (req, res) => {
         }
 
         res.json({
-            shippingCharge: 10 + shippingCharge + additionalCharge 
+            shippingCharge: 10 + shippingCharge + additionalCharge ,
+            nearestWarehouse: {
+                warehouseId: nearestWarehouse._id,
+                warehouseLocation: nearestWarehouse.location
+            }
         });
     } catch (error) {
         res.status(500).send("Internal server error");

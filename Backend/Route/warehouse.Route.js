@@ -6,11 +6,11 @@ const {authenticate}= require("../Middleware/auth.middleware")
 const warehouseRouter=Router();
 
 warehouseRouter.get("/getwarehouse",authenticate,roleAuthorization,getWarehouses);
-warehouseRouter.post("/addwarehouse",authenticate,roleAuthorization,addWarehouse);
+warehouseRouter.post("/addwarehouse",addWarehouse);
 warehouseRouter.patch("/updatewarehouse/:id",authenticate,roleAuthorization,updateWarehouse);
 warehouseRouter.delete("deletewarehouse/:id",authenticate,roleAuthorization,deleteWarehouse);
 warehouseRouter.get("/nearest",nearest);
 warehouseRouter.get("/shipping-charge",shipping);
-warehouseRouter.post("//shipping-charge/calculate",calculate)
+warehouseRouter.post("/shipping-charge/calculate",calculate)
 
 module.exports=warehouseRouter;

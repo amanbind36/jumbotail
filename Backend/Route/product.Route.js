@@ -5,7 +5,7 @@ const {authenticate}= require("../Middleware/auth.middleware")
 const productRouter=Router()
 
 productRouter.get("/getproduct",getAllProducts);
-productRouter.post("/addproduct",authenticate,roleAuthorization,addProduct);
+productRouter.post("/addproduct",addProduct);
 productRouter.delete("/deleteproduct/:id",authenticate,roleAuthorization,deleteProduct);
 productRouter.patch("/updateproduct/:id",authenticate,roleAuthorization,updateProduct);
 
