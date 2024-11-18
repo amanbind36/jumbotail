@@ -1,5 +1,6 @@
 const {Router}=require("express")
-const {register,login,updateuser,deleteuser}=require("../Controller/userController")
+const {register,login,updateuser,deleteuser}=require("../Controller/userController");
+
 const userRouter=Router();
 
 userRouter.get("/getuser",login);
